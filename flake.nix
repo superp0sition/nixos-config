@@ -1,5 +1,5 @@
 {
-  description = "FrostPhoenix's nixos configuration";
+  description = "abl's nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -11,7 +11,9 @@
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
   
     nix-gaming.url = "github:fufexan/nix-gaming";
-  
+    
+    rednix.url = "github:redcode-labs/RedNix";
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,6 +24,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.3.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # rednix = {
+    #   url = "github:redcode-labs/RedNix";
+    #   flake = true;
+    # };
     catppuccin-bat = {
       url = "github:catppuccin/bat";
       flake = false;
@@ -36,10 +47,10 @@
     };
   };
 
-  outputs = { nixpkgs, self, ...} @ inputs:
+  outputs = { nixpkgs, self, lanzaboote, ...} @ inputs:
   let
     selfPkgs = import ./pkgs;
-    username = "frostphoenix";
+    username = "abl";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -52,7 +63,10 @@
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ (import ./hosts/desktop) ];
+        modules = [ 
+          lanzaboote.nixosModules.lanzaboote
+          (import ./hosts/desktop)
+        ];
         specialArgs = { host="desktop"; inherit self inputs username ; };
       };
       laptop = nixpkgs.lib.nixosSystem {
