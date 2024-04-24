@@ -1,4 +1,4 @@
-{ inputs, nixpkgs, self, username, host, ...}:
+{ inputs, nixpkgs, self, username, host, config, system, ...}:
 {
   imports =
        [ (import ./bootloader.nix) ]
@@ -13,5 +13,4 @@
     ++ [ (import ./user.nix) ]
     ++ [ (import ./wayland.nix) ]
     ++ [ (import ./virtualization.nix) ];
-    #++ [ (import ./containers.nix) ];
 }

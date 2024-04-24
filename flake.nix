@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
+    utils.url = "github:numtide/flake-utils";
   
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
@@ -12,7 +13,7 @@
   
     nix-gaming.url = "github:fufexan/nix-gaming";
     
-    rednix.url = "github:redcode-labs/RedNix";
+    rednix.url = "github:superp0sition/rednix";
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
@@ -28,11 +29,16 @@
       url = "github:nix-community/lanzaboote/v0.3.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hackpkgs = {
+      url = "github:applePrincess/hackpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "utils";
+    };
+    chainsaw = {
+      url = "github:WithSecureLabs/chainsaw";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # rednix = {
-    #   url = "github:redcode-labs/RedNix";
-    #   flake = true;
-    # };
     catppuccin-bat = {
       url = "github:catppuccin/bat";
       flake = false;
@@ -55,6 +61,8 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      config.allowInsecurePredicate = p: true;
+      config.allowBroken = true;
     };
     lib = nixpkgs.lib;
   in
@@ -67,12 +75,12 @@
           lanzaboote.nixosModules.lanzaboote
           (import ./hosts/desktop)
         ];
-        specialArgs = { host="desktop"; inherit self inputs username ; };
+        specialArgs = { host="desktop"; inherit self inputs username nixpkgs system pkgs; };
       };
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ (import ./hosts/laptop) ];
-        specialArgs = { host="laptop"; inherit self inputs username ; };
+        specialArgs = { host="laptop"; inherit self inputs username nixpkgs system pkgs; };
       };
     };
   };
