@@ -7,6 +7,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    lowLatency.enable = if (host == "desktop") then true else false;
+    # lowLatency.enable = if (host == "desktop") then true else false;
   };
 }
