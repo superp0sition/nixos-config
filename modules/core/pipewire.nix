@@ -1,4 +1,4 @@
-{ ... }: 
+{ host, ... }: 
 {
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -7,6 +7,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # lowLatency.enable = true;
+    lowLatency.enable = if (host == "desktop") then true else false;
   };
 }
