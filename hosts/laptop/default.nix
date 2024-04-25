@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/core
-    inputs.rednix.container
+    # inputs.rednix.container
   ];
 
   environment.systemPackages = with pkgs; [
