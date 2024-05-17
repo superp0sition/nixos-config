@@ -24,10 +24,11 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    git-credential-manager
   ];
 
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }

@@ -1,4 +1,4 @@
-{ ... }: 
+{ host, ... }: 
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -279,8 +279,9 @@
 
     };
 
+    
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor=,preferred,auto,1.2
 
       xwayland {
         force_zero_scaling = true

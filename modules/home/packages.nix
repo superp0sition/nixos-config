@@ -27,6 +27,7 @@
     gnome.zenity
     winetricks
     wineWowPackages.wayland
+    obsidian
 
     # C / C++
     gcc
