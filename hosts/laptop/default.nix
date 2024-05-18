@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/core
-    ./../../nix-security-tool-box.nix
+    # ./../../nix-security-tool-box.nix
   ];
 
   environment.systemPackages = with pkgs; [

@@ -29,15 +29,6 @@
       url = "github:nix-community/lanzaboote/v0.3.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hackpkgs = {
-      url = "github:applePrincess/hackpkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "utils";
-    };
-    chainsaw = {
-      url = "github:WithSecureLabs/chainsaw";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     catppuccin-bat = {
       url = "github:catppuccin/bat";
