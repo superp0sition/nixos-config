@@ -24,5 +24,5 @@
     ++ [(import ./waybar)]                        # status bar
     ++ [(import ./wofi.nix)]                      # launcher
     ++ [(import ./zsh.nix)]                       # shell
-    ++ [(import ./nix-security-tool-box.nix)];
+    ;
 }
