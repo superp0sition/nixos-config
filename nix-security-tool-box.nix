@@ -11,7 +11,6 @@
     adidnsdump
     adreaper
     afflib
-    afl
     aflplusplus
     aiodnsbrute
     aircrack-ng
@@ -169,7 +168,7 @@
     galer
     galleta
     gallia
-    garble
+    # garble
     gato
     gau
     gcp-scanner
@@ -370,6 +369,7 @@
     pwntools
     pysqlrecon
     python310Packages.safety
+    python311Packages.wheel
     python3Packages.angr
     python3Packages.angrop
     python3Packages.binwalk
@@ -497,7 +497,6 @@
     urlhunter
     utillinux
     vegeta
-    volatility
     volatility3
     vulnix
     wad
@@ -522,7 +521,7 @@
     wprecon
     wpscan
     wsrepl
-    wstunnel
+    # wstunnel
     wtfis
     wuzz
     x3270
