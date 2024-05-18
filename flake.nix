@@ -13,7 +13,7 @@
   
     nix-gaming.url = "github:fufexan/nix-gaming";
     
-    # rednix.url = "github:superp0sition/rednix";
+    # rednix.url = "github:redcode-labs/RedNix";
 
     hyprland = {
       url = "github:hyprwm/Hyprland";

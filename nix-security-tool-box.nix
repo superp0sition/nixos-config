@@ -53,7 +53,7 @@
     bully
     burpsuite
     cabextract
-    cameradar
+    # cameradar
     cansina
     cantoolz
     cardpeek
@@ -199,7 +199,7 @@
     graphqlmap
     graphw00f
     grype
-    gtfocli
+    # gtfocli
     gzrt
     h8mail
     hachoir
@@ -369,7 +369,6 @@
     pwntools
     pysqlrecon
     python310Packages.safety
-    python311Packages.wheel
     python3Packages.angr
     python3Packages.angrop
     python3Packages.binwalk
@@ -422,7 +421,7 @@
     sipsak
     sipvicious
     sish
-    skjold
+    # skjold
     sleuthkit
     slowlorust
     smbmap
@@ -440,7 +439,7 @@
     srm
     ssdeep
     ssh-audit
-    ssh-mitm
+    # ssh-mitm
     sshchecker
     sshping
     ssldump
