@@ -100,7 +100,7 @@
     crunch
     curl
     cutecom
-    cutter
+    # cutter
     cyberchef
     dalfox
     das
@@ -322,7 +322,7 @@
     nomore403
     noseyparker
     nosqli
-    nrfutil
+    # nrfutil
     ntfs3g
     ntfsprogs
     nth
@@ -388,7 +388,7 @@
     python3Packages.unicorn
     radamsa
     radare2
-    radare2-cutter
+    # radare2-cutter
     rdwatool
     reaverwps
     recoverjpeg
