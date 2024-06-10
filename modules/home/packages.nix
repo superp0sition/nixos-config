@@ -28,6 +28,7 @@
     winetricks
     wineWowPackages.wayland
     obsidian
+    onlyoffice-bin
 
     # C / C++
     gcc
