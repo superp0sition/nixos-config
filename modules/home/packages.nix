@@ -8,6 +8,7 @@
     file                              # Show file information 
     fzf                               # fuzzy finder
     gtt                               # google translate TUI
+    gimp
     gtrash                            # rm replacement, put deleted files in system trash
     hexdump
     jdk17                             # java
@@ -41,6 +42,7 @@
     gparted                           # partition manager
     ffmpeg
     imv                               # image viewer
+    killall
     libnotify
 	  man-pages					            	  # extra man pages
     mpv                               # video player
@@ -49,6 +51,8 @@
     pamixer                           # pulseaudio command line mixer
     pavucontrol                       # pulseaudio volume controle (GUI)
     playerctl                         # controller for media players
+    wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
+    cliphist                          # clipboard manager
     poweralertd
     qalculate-gtk                     # calculator
     unzip

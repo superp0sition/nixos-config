@@ -73,6 +73,11 @@
         modules = [ (import ./hosts/laptop) ];
         specialArgs = { host="laptop"; inherit self inputs username nixpkgs system pkgs; };
       };
+       vm = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [ (import ./hosts/vm) ];
+        specialArgs = { host="vm"; inherit self inputs username ; };
+      };
     };
   };
 }
